@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """ Setup file for easy installation """
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 version = __import__('feedback').__version__
@@ -18,7 +18,8 @@ setup(name='django-pyres-feedback',
       license='BSD',
       keywords='django, pyres, feedback, application',
       url='https://github.com/nott/django-pyres-feedback',
-      packages=['feedback',],
+      packages=find_packages(),
+      include_package_data=True,
       long_description=LONG_DESCRIPTION,
       install_requires=['django>=1.2.0',
                         'pyres>=1.0',],
