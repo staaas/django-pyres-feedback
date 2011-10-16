@@ -1,1 +1,1 @@
-recursive-include filebrowser/templates *
+recursive-include feedback/templates *
