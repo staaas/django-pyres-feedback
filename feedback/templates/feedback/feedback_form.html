@@ -49,7 +49,7 @@
 
 <form id="feedback-form" class="form-stacked" method="POST" action="{% url submit_feedback %}">
   <fieldset>
-    <legend>Leave feedback</legend>
+    <legend>{% trans "Leave feedback" %}</legend>
     {% csrf_token %}
     <div id="feedback-form-inner">
       {% include "feedback/feedback_form_partial.html" %}
