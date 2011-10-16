@@ -1,7 +1,7 @@
 from django import template
 
 from feedback.forms import FeedbackForm
-
+from django.utils.translation import get_language
 
 register = template.Library()
 
@@ -17,6 +17,7 @@ def feedback_form(context):
         if user.email:
             feedback_initial['email'] = user.email
 
-    return {'feedback_form': FeedbackForm(initial=feedback_initial)}
+    return {'feedback_form': FeedbackForm(initial=feedback_initial),
+            'language_code': get_language()}
 
 

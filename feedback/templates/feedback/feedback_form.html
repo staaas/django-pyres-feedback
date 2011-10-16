@@ -47,7 +47,7 @@
   <p>{% trans "We will answer soon." %}</p>
 </div>
 
-<form id="feedback-form" class="form-stacked" method="POST" action="{% url submit_feedback %}">
+<form id="feedback-form" class="form-stacked" method="POST" action="{% url submit_feedback %}?lang={{ language_code }}">
   <fieldset>
     <legend>{% trans "Leave feedback" %}</legend>
     {% csrf_token %}
