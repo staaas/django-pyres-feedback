@@ -63,6 +63,6 @@ class FeedbackTask(object):
             '-----------------------\n%(text)s' % {
             'text': text, 'sender': "%s <%s>" % (name, email)}
         EmailMessage(subj, mail_text, email_acc,
-            settings.MANAGERS, [],
+            [m[1] for m in settings.MANAGERS], [],
             headers = {'Reply-To': email}).send()
 
