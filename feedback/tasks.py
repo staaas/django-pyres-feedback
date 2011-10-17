@@ -12,8 +12,8 @@ class FeedbackBot(ClientXMPP):
     """
 
     def __init__(self, message):
-        ClientXMPP.__init__(self, settings.FEEDBACK_SENDER_JID,
-                            settings.FEEDBACK_SENDER_PWD)
+        ClientXMPP.__init__(self, settings.FEEDBACK_SENDER_XMPP_JID,
+                            settings.FEEDBACK_SENDER_XMPP_PWD)
 
         self.msg = message
 
@@ -63,6 +63,6 @@ class FeedbackTask(object):
             '-----------------------\n%(text)s' % {
             'text': text, 'sender': "%s <%s>" % (name, email)}
         EmailMessage(subj, mail_text, email_acc,
-            settings.FEEDBACK_RECIPIENT_EMAILS, [],
+            settings.MANAGERS, [],
             headers = {'Reply-To': email}).send()
 
