@@ -4,6 +4,8 @@ from django.core.mail import EmailMessage
 from django.conf import settings
 
 
+FEEDBACK_QUEUE = getattr(settings, 'FEEDBACK_QUEUE', 'feedback')
+
 class FeedbackBot(ClientXMPP):
 
     """
@@ -45,7 +47,7 @@ def send_xmpp(text):
         raise Exception('Couldn\'t send feedback via XMPP')
 
 class FeedbackTask(object):
-    queue = 'messaging'
+    queue = FEEDBACK_QUEUE
 
     @staticmethod
     def perform(name, email, text):
