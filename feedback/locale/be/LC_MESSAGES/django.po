@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-10-17 00:20+0300\n"
+"POT-Creation-Date: 2011-10-18 15:07+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -31,7 +31,7 @@ msgid "E-mail"
 msgstr ""
 
 #: forms.py:52
-msgid "Feedback"
+msgid "Opinion"
 msgstr "Водгук"
 
 #: templates/feedback/feedback_form.html:40
@@ -51,8 +51,8 @@ msgid "We will answer soon."
 msgstr "Мы хутка адкажам."
 
 #: templates/feedback/feedback_form.html:52
-msgid "Leave feedback"
-msgstr "Пакінуць водгук"
+msgid "Feedback"
+msgstr "Зваротная сувязь"
 
 #: templates/feedback/feedback_form.html:58
 msgid "Send"
